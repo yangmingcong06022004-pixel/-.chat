@@ -274,7 +274,7 @@ def read_black_pearl_singapore_xlsx(path: str = BLACK_PEARL_SINGAPORE_XLSX_PATH)
                 f"{place}-黑珍珠新加坡 | 餐厅名称:{name} | 菜系:{cuisine} | 钻级:{diamond} | 人均消费约¥{price} | 地点:{place}"
             )
     except Exception:
-      ∏  import pandas as pd
+        import pandas as pd
         df = pd.read_excel(path)
         for _, item in df.iterrows():
             name = str(item.get("餐厅名称") or "").strip()

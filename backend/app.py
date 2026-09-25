@@ -76,7 +76,7 @@ except Exception as e:
 app = Flask(__name__)
 CORS(app)
 
-BAIDU_AK          = os.environ.get("BAIDU_SERVER_AK", os.environ.get("BAIDU_MAP_AK", "8tskCa9dm3m8i1DQvtPRW9AxSfB1cZKY"))
+BAIDU_AK = os.environ.get("BAIDU_SERVER_AK", os.environ.get("BAIDU_MAP_AK", ""))
 BAIDU_RIDING_URL  = "https://api.map.baidu.com/directionlite/v1/riding"
 BAIDU_WALKING_URL = "https://api.map.baidu.com/directionlite/v1/walking"
 BAIDU_GEOCODE_URL = "https://api.map.baidu.com/geocoding/v3/"
@@ -92,7 +92,7 @@ LONGCAT_MODEL     = os.environ.get("LONGCAT_MODEL", "LongCat-2.0-Preview")
 LLM_PROVIDER      = os.environ.get("MADO_LLM_PROVIDER", "auto").strip().lower()
 LONGCAT_RESOURCE_TIMEOUT = int(os.environ.get("LONGCAT_RESOURCE_TIMEOUT", "5"))
 BAIDU_TRANSLATE_URL = "https://fanyi-api.baidu.com/ait/api/aiTextTranslate"
-BAIDU_TRANSLATE_KEY = os.environ.get("BAIDU_TRANSLATE_KEY", "leVv_d8cn9iia4eo5ucr6cjp0")
+BAIDU_TRANSLATE_KEY = os.environ.get("BAIDU_TRANSLATE_KEY", "")
 AMAP_JSAPI_KEY = os.environ.get("AMAP_JSAPI_KEY", os.environ.get("GAODE_JSAPI_KEY", ""))
 AMAP_SECURITY_JS_CODE = os.environ.get("AMAP_SECURITY_JS_CODE", os.environ.get("GAODE_SECURITY_JS_CODE", ""))
 AMAP_MCP_KEY = os.environ.get("AMAP_MCP_KEY", os.environ.get("GAODE_MCP_KEY", ""))
